@@ -36,6 +36,7 @@ Step 3: Repeat the  iteration  until the losses become constant and  minimum<BR>
 Step 4 : Test for the XOR patterns.
 
 <H3>Program:</H3>
+
 ```
 import numpy as np
 import pandas as pd
@@ -49,8 +50,8 @@ n_h = 2
 m = x.shape[1]
 lr = 0.1
 np.random.seed(2)
-w1 = np.random.rand(n_h,n_x)   # Weight matrix for hidden layer
-w2 = np.random.rand(n_y,n_h)   # Weight matrix for output layer
+w1 = np.random.rand(n_h,n_x)
+w2 = np.random.rand(n_y,n_h)
 losses = []
 def sigmoid(z):
     z= 1/(1+np.exp(-z))
@@ -97,7 +98,6 @@ test=np.array([[0],[1]])
 predict(w1,w2,test)
 test=np.array([[0],[0]])
 predict(w1,w2,test)
-
 ```
 
 <H3>Output:</H3>
